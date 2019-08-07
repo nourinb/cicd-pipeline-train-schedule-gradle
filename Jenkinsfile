@@ -12,7 +12,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId:'webservergithubapikey',usernameVariable: 'USERNAME',passwordVariable: USERPASS)]){ 
                     sshPublisher{
-                    failOnErrror: true,
+                    failOnError: true,
                     continueOnError: false,
                     publishers: [
                         sshPublisherDesc{
